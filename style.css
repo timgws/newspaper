@@ -40,12 +40,16 @@ p {
 
 .article a:hover {
     color: #07425e;
-    /*text-decoration: underline;*/
     border-bottom: 1px dashed #0c74a6;
 }
 
 .source {
-    margin-bottom: 13px;
+    margin: 40px 0 25px 0;
+}
+@media all and (max-width: 660px) {
+    .source {
+        margin: 10px 0;
+    }
 }
 
 .source p {
@@ -63,7 +67,7 @@ p {
     color: #5BAB03;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.9em;
     border-bottom: 1px dashed #78a642
 }
 
@@ -88,11 +92,6 @@ div.thumbnail .caption {
     font-size: 10pt;
 }
 
-div.thumb {
-    width: auto;
-    background-color: transparent;
-}
-
 div.thumb.left {
     margin: .5em .75em 0.2em 0;
     float: left;
@@ -101,4 +100,30 @@ div.thumb.left {
 div.thumb.right {
     margin: .5em 0 1.3em 1.4em;
     float: right;
+}
+
+div.thumb {
+    width: auto;
+    background-color: transparent;
+}
+
+@media all and (max-width: 660px) {
+    div.thumbnail {
+        max-width: 220px;
+    }
+}
+
+
+@media all and (max-width: 490px) {
+    div.thumbnail {
+        width: 100% !important;
+        max-width: 100%;
+        padding: 0 !important;
+        float: none !important;
+    }
+
+    div.thumb {
+        padding: 0 !important;
+        margin: 10px 0 !important;
+    }
 }
